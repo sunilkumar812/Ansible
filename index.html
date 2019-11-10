@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Connect Four</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    html,
+    body {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+<div class="mainMenufocusable" id="ConnectDiv" style="border-style:none;width:inherit; height:inherit;">
+  <canvas id="main"></canvas>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="connect4-bundle.js"></script></body>
+<script type="text/javascript" src="../../js/spatial_navigation.js"></script>
+<script type="text/javascript" src="js/spacialNavigation.js"></script></body>
+<script type="text/javascript">		
+		
+		//For Back button
+		$('html').keyup(function(e)
+		{   
+		 if(e.keyCode == 8) 
+		 {
+		  console.log('key pressed');
+			var iframe = parent.document.getElementById('contentFrame');
+			var header = parent.document.getElementById('header');
+	    	iframe.setAttribute("class","fullScreen");
+	    	iframe.style.height = "80vh";
+	    	header.removeAttribute("class","hide");
+		  window.location.href = "../games.html";    //Go to Game home page
+		 }
+		 });
+ </script>
+</html>
